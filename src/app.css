@@ -1,3 +1,16 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --medium-background-color: #1C1F2C;
+  --dark-background-color: #12151D;
+}
+
+html {
+  font-family: var(--font-family);
+  background: var(--dark-background-color);
+  height: 100dvh;
+  color: #fff;
+}
