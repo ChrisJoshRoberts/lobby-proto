@@ -1,5 +1,5 @@
 <script>
-  import {  AlignLeft, Club, Trophy, Coins } from 'lucide-svelte';
+  import {  AlignLeft, Club, Trophy, Coins, WalletMinimal, Bell, MessageCircleMore } from 'lucide-svelte';
 
 </script>
 
@@ -52,10 +52,42 @@
         </div>
       </div>
     </div>
+    <div class="top-bar-item">
+      <div class="secondary-button">
+        <WalletMinimal strokeWidth={0.8} fill='#FFFFFF66'/>
+        <p>Wallet</p>
+      </div>
+      <div class="primary-icon-btn">
+        <MessageCircleMore fill='#fff'/>
+      </div>
+      <div class="secondary-button icon-btn">
+        <Bell strokeWidth={0.8} fill='#FFFFFF66'/>
+      </div>
+    </div>
   </div>
 </div>
 
 <style>
+  .secondary-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background-color:#272639;
+    border-radius: 8px;
+
+    p {
+      color: #ffffff66;
+    }
+  }
+  .icon-btn {
+    padding: 8px;
+  }
+  .primary-icon-btn {
+    background: linear-gradient(0deg, #2487cd 0%, #93cdfa 100%);
+    padding: 8px;
+    border-radius: 8px;
+  }
   .current-balance-wrapper {
     display: flex;
     align-items: center;
