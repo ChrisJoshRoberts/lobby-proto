@@ -136,6 +136,10 @@
     margin: 0 16px;
   }
   .top-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
