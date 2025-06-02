@@ -28,7 +28,7 @@
     background-color: green;
     border-radius: 16px;
     height: 320px;
-    background: url('assets/char.jpg') ;
+    background: url('assets/virtual-casino-experience-exploring-modern-technologies-sports-gambling-finances-with.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-position: 10% 20%;

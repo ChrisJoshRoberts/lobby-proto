@@ -6,9 +6,14 @@
 	import RightSidebar from '$lib/components/RightSidebar.svelte';
 	import TopBar from '$lib/components/topBar.svelte';
 	import { ChevronRight, ChevronLeft } from 'lucide-svelte';
+	import { isModalOpen } from '$lib/stores';
+	import CustomModal from '$lib/components/CustomModal.svelte';
 </script>
 
 <div>
+	{#if $isModalOpen}
+		<CustomModal />
+	{/if}
 	<TopBar />
 	<div class="main-container">
 		<LeftSidebar />
@@ -27,7 +32,7 @@
 						</div>
 					</div>
 				</div>
-        <GamesGrid />
+				<GamesGrid />
 			</div>
 		</div>
 		<RightSidebar />
@@ -36,9 +41,9 @@
 
 <style>
 	.chev {
-    padding: 8px;
-    border-radius: 8px;
-    background-color: #1c1f2a;
+		padding: 8px;
+		border-radius: 8px;
+		background-color: #1c1f2a;
 	}
 	.navigation-chev {
 		display: flex;
@@ -57,13 +62,14 @@
 		background-color: #12151d;
 		padding: 16px;
 		overflow-y: auto;
+		height: 100%;
 		color: white;
 		position: relative;
 		top: 78px;
 		width: calc(100% - 300px - 280px);
 		margin-left: 16px;
 		margin-top: 16px;
-    margin-bottom: 44px;
+		margin-bottom: 44px;
 	}
 	.games-section {
 		margin-top: 16px;
