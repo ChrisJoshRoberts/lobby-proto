@@ -8,13 +8,6 @@
 	import { ChevronRight, ChevronLeft } from 'lucide-svelte';
 	import { isModalOpen } from '$lib/stores';
 	import CustomModal from '$lib/components/CustomModal.svelte';
-	import { io } from 'socket.io-client';
-
-	const socket = io()
-
-	socket.on('eventFromServer', (message) => {
-		console.log('Message from server:', message);
-	})
 
 </script>
 
