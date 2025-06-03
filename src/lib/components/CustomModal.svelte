@@ -48,7 +48,7 @@
     align-items: center;
     border-radius: 16px;
     box-shadow: rgba(68, 105, 137, 0.48) 6px 2px 16px 0px, rgba(67, 116, 161, 0.8) -6px -2px 16px 0px;
-    width: 50%;
+    width: 40%;
     height: 50%;
     background-color: #222531;
   }
