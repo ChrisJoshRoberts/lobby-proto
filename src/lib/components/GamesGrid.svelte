@@ -10,7 +10,7 @@
 			version: 'Logo Only'
 		},
 		{
-			image: 'assets/lobby-icons/just-logo/1_BullsVsBears_Logo only.png',
+			image: 'assets/lobby-icons/Updated-icons/1_BullsVsBears_Logo only.png',
 			name: 'Bulls vs Bears',
 			version: 'Logo Only'
 		},
@@ -35,7 +35,7 @@
 			version: 'Logo Only'
 		},
 		{
-			image: 'assets/lobby-icons/just-logo/1_SuperShowballMystery - Logo only.png',
+			image: 'assets/lobby-icons/Updated-icons/1_SuperShowballMystery - Logo only.png',
 			name: 'Super Showball Mystery',
 			version: 'Logo Only'
 		},
