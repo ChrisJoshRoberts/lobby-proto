@@ -112,7 +112,7 @@
     background-color: #1D202D;
     width: 300px;
     padding: 16px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 
   }
   .top-card-container {

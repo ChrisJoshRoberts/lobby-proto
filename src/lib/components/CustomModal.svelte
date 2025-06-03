@@ -9,7 +9,7 @@
     <img src="assets/Tick.png" alt="tick" class="tick-icon" />
     <h1>Success!</h1>
     <h2>You clicked,<br> <span>{$gameName}</span></h2>
-    <button onclick={closeModal}>Close</button>
+    <!-- <button onclick={closeModal}>Close</button> -->
   </div>
 </div>
 

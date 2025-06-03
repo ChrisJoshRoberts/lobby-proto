@@ -54,7 +54,7 @@
 
 <style>
   .chat-wrapper {
-    overflow-y: scroll;
+    overflow-y: hidden;
     height: 85%;
   }
   .avatar {

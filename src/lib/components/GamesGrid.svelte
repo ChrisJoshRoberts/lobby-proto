@@ -40,7 +40,7 @@
 			version: 'Logo Only'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_3LuckyGators_Logo,char and feature.png',
+			image: 'assets/lobby-icons/Updated-icons/3_3LuckyGators_Logo,char and feature.png',
 			name: '3 Lucky Gators',
 			version: 'Logo, character & feature'
 		},
@@ -50,17 +50,17 @@
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_Amazon-LostGold_logo,char and feature.png',
+			image: 'assets/lobby-icons/Updated-icons/3_Amazon-LostGold_logo,char and feature.png',
 			name: 'Amazon Lost Gold',
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_CrazyMonkey.png',
+			image: 'assets/lobby-icons/Updated-icons/3_CrazyMonkey.png',
 			name: 'Crazy Monkey',
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_DarkWaters - Logo,char and feature.png',
+			image: 'assets/lobby-icons/Updated-icons/3_DarkWaters - Logo,char and feature.png',
 			name: 'Dark Waters',
 			version: 'Logo, character & feature'
 		},
@@ -70,12 +70,12 @@
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_Piggy Bonanza - logo, char and feature.png',
+			image: 'assets/lobby-icons/Updated-icons/3_Piggy Bonanza - logo, char and feature.png',
 			name: 'Piggy Bonanza',
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/logo-char-feat/3_T-Rex Rocks - logo,char and feature.png',
+			image: 'assets/lobby-icons/Updated-icons/3_T-Rex Rocks - logo,char and feature.png',
 			name: 'T-Rex Rocks',
 			version: 'Logo, character & feature'
 		},
@@ -100,7 +100,7 @@
 			version: 'With character'
 		},
 		{
-			image: 'assets/lobby-icons/with-char/2_LuckyBonanza_logo and char.png',
+			image: 'assets/lobby-icons/Updated-icons/2_LuckyBonanza_logo and char - SQUARE SYMBOL.png',
 			name: 'Lucky Bonanza',
 			version: 'With character'
 		},
@@ -110,7 +110,7 @@
 			version: 'With character'
 		},
 		{
-			image: 'assets/lobby-icons/with-char/2_LuckyShot_logo and char.png',
+			image: 'assets/lobby-icons/Updated-icons/2_LuckyShot_logo and char - NO RED.png',
 			name: 'Lucky Shot',
 			version: 'With character'
 		},
@@ -120,7 +120,7 @@
 			version: 'With character'
 		},
 		{
-			image: 'assets/lobby-icons/with-char/2_Splash of Gold_Leprechaun_logo and char.png',
+			image: 'assets/lobby-icons/Updated-icons/2_Splash of Gold_Leprechaun_logo and char - NO BORDER.png',
 			name: 'Splash of Gold Leprechaun',
 			version: 'With character'
 		}
@@ -131,8 +131,18 @@
 	function shuffleGames(array: Array<{ image: string; name: string; version: string }>) {
 		const shuffled = [...array];
 		for (let i = shuffled.length - 1; i > 0; i--) {
+			// Pick a random index, but also sometimes swap with a random earlier index for extra chaos
 			const j = Math.floor(Math.random() * (i + 1));
 			[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+
+			// Occasionally swap two other random elements for more erratic shuffling
+			if (Math.random() > 0.7 && shuffled.length > 2) {
+				const k = Math.floor(Math.random() * shuffled.length);
+				const l = Math.floor(Math.random() * shuffled.length);
+				if (k !== l) {
+					[shuffled[k], shuffled[l]] = [shuffled[l], shuffled[k]];
+				}
+			}
 		}
 		return shuffled;
 	}
@@ -175,11 +185,11 @@
 		height: auto;
 		border-radius: 8px;
 		object-fit: cover;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.2s ease-in-out;
 
 		&:hover {
-			opacity: 0.6;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			transform: scale(1.05);
+			box-shadow: 0px 0px 20px #5BE94C80;
 		}
 	}
 

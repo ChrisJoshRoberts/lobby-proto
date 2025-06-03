@@ -8,6 +8,14 @@
 	import { ChevronRight, ChevronLeft } from 'lucide-svelte';
 	import { isModalOpen } from '$lib/stores';
 	import CustomModal from '$lib/components/CustomModal.svelte';
+	import { io } from 'socket.io-client';
+
+	const socket = io()
+
+	socket.on('eventFromServer', (message) => {
+		console.log('Message from server:', message);
+	})
+
 </script>
 
 <div>
@@ -19,18 +27,18 @@
 		<LeftSidebar />
 		<div class="center-content">
 			<Banner />
-			<RecentBanner />
+			<!-- <RecentBanner /> -->
 			<div class="games-section">
 				<div class="title-container">
 					<h4>Original Games</h4>
-					<div class="navigation-chev">
+					<!-- <div class="navigation-chev">
 						<div class="chev">
 							<ChevronLeft />
 						</div>
 						<div class="chev">
 							<ChevronRight />
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<GamesGrid />
 			</div>
