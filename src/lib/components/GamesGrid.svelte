@@ -162,7 +162,7 @@
 <style>
 	.games-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
 		gap: 16px;
 		padding: 16px;
 		background-color: #222531;
@@ -180,6 +180,17 @@
 		&:hover {
 			opacity: 0.6;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	@media (max-width: 462px) {
+		.games-grid {
+			grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+			gap: 8px;
+		}
+
+		.game-icon {
+			border-radius: 4px;
 		}
 	}
 </style>

@@ -133,4 +133,10 @@
       opacity: 0.5;
     }
   }
+
+  @media (max-width: 1110px) {
+    .right-main {
+      display: none;
+    }
+  }
 </style>

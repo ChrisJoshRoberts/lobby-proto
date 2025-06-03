@@ -6,12 +6,28 @@
 </script>
 <div class="background">
   <div class="modal">
-    <h2>{$gameName}</h2>
+    <img src="assets/Tick.png" alt="tick" class="tick-icon" />
+    <h1>Success!</h1>
+    <h2>You clicked,<br> <span>{$gameName}</span></h2>
     <button onclick={closeModal}>Close</button>
   </div>
 </div>
 
 <style>
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  span {
+    color: #5EE74E;
+    font-weight: 700;
+    font-size: 24px;
+  }
+  .tick-icon {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 16px;
+  }
   .background {
     position: absolute;
     top: 0;
@@ -22,7 +38,8 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    background-color: #12151da3;
+    background-color: #12151d56;
+    backdrop-filter: blur(5px);
   }
   .modal {
     display: flex;
@@ -37,9 +54,12 @@
   }
   h2 {
     color: white;
+    text-align: center;
+    font-weight: 300;
   }
 
   button {
+    margin: 16px;
     padding: 8px 16px;
     background-color: #3f4665;
     color: white;
@@ -51,5 +71,10 @@
       background-color: #7c7f8fb7;
     }
   }
-  
+  @media (max-width: 660px) {
+    .modal {
+      width: 80%;
+      height: 60%;
+    }
+  }
 </style>

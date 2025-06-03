@@ -87,9 +87,6 @@
     background-color: #040d1d;
     border-radius: 8px;
   }
-  .main {
-    padding: 16px;
-  }
   .search-bar {
     display: flex;
     background-color: #122a53;
@@ -114,6 +111,8 @@
     border-top: 1px solid #ffffff24;
     background-color: #1D202D;
     width: 300px;
+    padding: 16px;
+    overflow-y: scroll;
 
   }
   .top-card-container {
@@ -142,5 +141,11 @@
   .card-title {
     padding: 8px;
     color: #ffffffa7;
+  }
+
+  @media (max-width: 1110px) {
+    .main {
+      display: none;
+    }
   }
 </style>

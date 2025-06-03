@@ -62,7 +62,6 @@
 		background-color: #12151d;
 		padding: 16px;
 		overflow-y: auto;
-		height: 100%;
 		color: white;
 		position: relative;
 		top: 78px;
@@ -82,5 +81,12 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 16px;
+	}
+
+	@media (max-width: 1110px) {
+		.center-content {
+			width: 100%;
+			margin-left: 0;
+		}
 	}
 </style>

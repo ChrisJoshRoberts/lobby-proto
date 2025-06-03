@@ -43,6 +43,7 @@
     justify-content: space-between;
     margin-left: 16px;
     gap: 8px;
+    flex-wrap: wrap;
 
   }
   .recent-win {
@@ -52,9 +53,8 @@
     align-items: center;
     backdrop-filter: blur(20px);
     border-radius: 8px;
-    width: 100%;
     border: 0.5px solid #a5d8ff40;
-
+    flex: 1;
   }
   .line {
     position: absolute;
@@ -75,8 +75,7 @@
     gap: 16px;
     border-right: 1px solid #5b5b5b;
     width: 200px;
-
-
+    flex-shrink: 0;
   }
   .info {
     display: flex;
@@ -86,11 +85,22 @@
   }
   .recent-banner {
     display: flex;
-
     align-items: center;
     background-color: #1C1F2A;
     padding: 16px;
     border-radius: 8px;
     margin-top: 16px;
+  }
+
+  @media (max-width: 1110px) {
+    .recent-banner {
+      flex-direction: column;
+    }
+    .info-wrapper {
+      flex-direction: row;
+      width: 100%;
+      border: none;
+      margin-bottom: 16px;
+    }
   }
 </style>

@@ -61,4 +61,9 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+  @media (max-width: 462px) {
+    .title {
+      font-size: 32px;
+    }
+  }
 </style>

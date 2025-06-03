@@ -13,7 +13,7 @@
         CR<span>BET</span>
       </div>
     </div>
-    <div class="top-bar-item">
+    <div class="top-bar-item hidden">
       <div class="toggle-container">
         <div class="toggle-button selected">
           <div class="icon">
@@ -38,7 +38,7 @@
     </div>
   </div>
   <div class="right">
-    <div class="top-bar-item">
+    <div class="top-bar-item hidden">
       <div class="deposit-container">
         <div class="current-balance-wrapper">
           <div class='flex gap-2'>
@@ -158,6 +158,12 @@
 
     span {
       color: var(--color-sky-500)
+    }
+  }
+
+  @media (max-width: 1110px) {
+    .top-bar-item.hidden {
+      display: none;
     }
   }
 </style>
