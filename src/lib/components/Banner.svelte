@@ -1,5 +1,6 @@
 <div class="banner">
   <div class="gradient"></div>
+  <img src="assets/virtual-casino-experience-exploring-modern-technologies-sports-gambling-finances-with.jpg" alt="banner" class="banner-image"/>
   <div class="title-wrapper">
     <p class="upper-text">Claim your welcome offer today!</p>
     <h1 class="title">Welcome to CR<span>BET</span></h1>
@@ -20,15 +21,25 @@
     height: 100%;
     background: linear-gradient(0deg, rgba(0, 6, 33, 0.7) 20%, rgba(0, 0, 0, 0.2) 100%);
     border-radius: 16px;
+    z-index: 300;
+  }
+  .banner-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 10% 20%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    border-radius: 16px;
   }
   .banner {
     position: relative;
     width: 100%;
     padding: 16px;
-    background-color: green;
     border-radius: 16px;
     height: 320px;
-    background: url('assets/virtual-casino-experience-exploring-modern-technologies-sports-gambling-finances-with.jpg') ;
     background-position: center;
     background-repeat: no-repeat;
     background-position: 10% 20%;
