@@ -17,7 +17,10 @@
 			<h1 class="success">Success!</h1>
 			<h2>Thank you for your participation!</h2>
 		{:else}
+		<div class="game-tile-container">
 			<img src={$gameTile} alt="game tile" class="game-tile" />
+			<img src={$gameTile} alt="game tile" class="game-tile blur" />
+		</div>
 			<h1>You have selected</h1>
 			<h2><span>{$gameName}</span></h2>
 			<!-- <p class="byline">{$gameVersion}</p> -->
@@ -31,6 +34,30 @@
 </div>
 
 <style>
+	.game-tile-container {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		margin-bottom: 16px;
+		display: flex;
+		justify-content: center;
+
+	}
+		.game-tile {
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		margin-bottom: 16px;
+		border-radius: 8px;
+		/* box-shadow: 0px 0px 20px #5BE94C80; */
+	}
+	.blur {
+		position: absolute;
+		top: 10px;
+		z-index: 0;
+		filter: blur(6px);
+	}
   .success {
     font-size: 44px;
   }
@@ -55,12 +82,7 @@
 		font-weight: 700;
 		font-size: 24px;
 	}
-	.game-tile {
-		width: 150px;
-		height: 150px;
-		margin-bottom: 16px;
-		border-radius: 8px;
-	}
+
 	.tick-icon {
 		width: 180px;
 		height: 180px;
