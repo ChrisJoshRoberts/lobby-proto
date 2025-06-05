@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { isModalOpen, gameName } from '$lib/stores';
+	import { isModalOpen, gameName, gameTile, gameVersion } from '$lib/stores';
 	import CustomModal from './CustomModal.svelte';
 
 	const gamesArray = [
@@ -35,9 +35,9 @@
 			version: 'Logo Only'
 		},
 		{
-			image: 'assets/lobby-icons/Updated-icons/1_SuperShowballMystery - Logo only.png',
+			image: 'assets/lobby-icons/new-updates/3_SuperShowballMystery - Logo, char and feature.png',
 			name: 'Super Showball Mystery',
-			version: 'Logo Only'
+			version: 'Logo, character & feature',
 		},
 		{
 			image: 'assets/lobby-icons/Updated-icons/3_3LuckyGators_Logo,char and feature.png',
@@ -85,7 +85,7 @@
 			version: 'Logo, character & feature'
 		},
 		{
-			image: 'assets/lobby-icons/with-char/2_AlaskanFishing_Logo and char.png',
+			image: 'assets/lobby-icons/new-updates/2_AlaskanFishing_Logo and char 1.png',
 			name: 'Alaskan Fishing',
 			version: 'With character'
 		},
@@ -154,7 +154,9 @@
 
 	function handleIconClick(game: { image: string; name: string; version: string }) {
 		// Handle the click event for the game icons
+		$gameTile = game.image;
     $gameName = game.name;
+		$gameVersion = game.version;
 		$isModalOpen = true;
 		console.log('Game icon clicked', $gameName);
 
