@@ -123,6 +123,41 @@
 			image: 'assets/lobby-icons/Updated-icons/2_Splash of Gold_Leprechaun_logo and char - NO BORDER.png',
 			name: 'Splash of Gold Leprechaun',
 			version: 'With character'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_9EnchantedBeans_logo, char and multiplier.png',
+			name: '9 Enchanted Beans',
+			version: 'Logo, character & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_Advari_logo and multiplier.png',
+			name: 'Advari',
+			version: 'Logo & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_ApeRulz_logo and multiplier copy.png',
+			name: 'Ape Rulz',
+			version: 'Logo & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_BuzzFuzz_Logo and multiplier.png',
+			name: 'Buzz 4 Fuzz',
+			version: 'Logo & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_FortunePike Gold logo, character and multiplier.png',
+			name: 'Fortune Pike Gold',
+			version: 'Logo, character & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_OinkFarm_logo and multiplier.png',
+			name: 'Oink Farm',
+			version: 'Logo & multiplier'
+		},
+		{
+			image: 'assets/lobby-icons/logo-char-multiplier/4_Stumpy_Logo, char and multiplier.png',
+			name: 'Stumpy McDoodles',
+			version: 'Logo, character & multiplier'
 		}
 	];
 
