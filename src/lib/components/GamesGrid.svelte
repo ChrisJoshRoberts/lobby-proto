@@ -3,163 +3,164 @@
 	import { isModalOpen, gameName, gameTile, gameVersion } from '$lib/stores';
 	import CustomModal from './CustomModal.svelte';
 
-	const gamesArray = [
-		{
-			image: 'assets/lobby-icons/just-logo/1_Bells-and-Holly-Logo-only.png',
-			name: 'Bells and Holly',
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/1_BullsVsBears_Logo only.png',
-			name: 'Bulls vs Bears',
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/just-logo/1_CarnavalLink&Win_logo only.png',
-			name: 'Carnival Link & Win',
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/just-logo/1_Clover-Rollover-Logo only.png',
-			name: 'Clover Rollover',
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/just-logo/1_FlanagansRiches_Logo only.png',
-			name: "Flanagan's Riches",
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/just-logo/1_FruitSalad_logo only.png',
-			name: 'Fruit Salad',
-			version: 'Logo Only'
-		},
-		{
-			image: 'assets/lobby-icons/new-updates/3_SuperShowballMystery - Logo, char and feature.png',
-			name: 'Super Showball Mystery',
-			version: 'Logo, character & feature',
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_3LuckyGators_Logo,char and feature.png',
-			name: '3 Lucky Gators',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-feat/3_9PotsofGold_logo,char and feature.png',
-			name: '9 Pots of Gold',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_Amazon-LostGold_logo,char and feature.png',
-			name: 'Amazon Lost Gold',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_CrazyMonkey.png',
-			name: 'Crazy Monkey',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_DarkWaters - Logo,char and feature.png',
-			name: 'Dark Waters',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-feat/3_MonkeyBonanza_logo,char and feature.png',
-			name: 'Money Bonanza',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_Piggy Bonanza - logo, char and feature.png',
-			name: 'Piggy Bonanza',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/3_T-Rex Rocks - logo,char and feature.png',
-			name: 'T-Rex Rocks',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-feat/3_WonderWoods - logo,char and feature.png',
-			name: 'Wonder Woods',
-			version: 'Logo, character & feature'
-		},
-		{
-			image: 'assets/lobby-icons/new-updates/2_AlaskanFishing_Logo and char 1.png',
-			name: 'Alaskan Fishing',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/with-char/2_Goldwyns Fairies logo and char.png',
-			name: 'Goldwyns Fairies',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/with-char/2_JadeShuriken Logo and char.png',
-			name: 'Jade Shuriken',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/2_LuckyBonanza_logo and char - SQUARE SYMBOL.png',
-			name: 'Lucky Bonanza',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/with-char/2_LuckyLeprechaun logo and char.png',
-			name: 'Lucky Leprechaun',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/2_LuckyShot_logo and char - NO RED.png',
-			name: 'Lucky Shot',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/with-char/2_SoccerStriker_logo and char.png',
-			name: 'Soccer Striker',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/Updated-icons/2_Splash of Gold_Leprechaun_logo and char - NO BORDER.png',
-			name: 'Splash of Gold Leprechaun',
-			version: 'With character'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_9EnchantedBeans_logo, char and multiplier.png',
-			name: '9 Enchanted Beans',
-			version: 'Logo, character & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_Advari_logo and multiplier.png',
-			name: 'Advari',
-			version: 'Logo & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_ApeRulz_logo and multiplier copy.png',
-			name: 'Ape Rulz',
-			version: 'Logo & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_BuzzFuzz_Logo and multiplier.png',
-			name: 'Buzz 4 Fuzz',
-			version: 'Logo & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_FortunePike Gold logo, character and multiplier.png',
-			name: 'Fortune Pike Gold',
-			version: 'Logo, character & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_OinkFarm_logo and multiplier.png',
-			name: 'Oink Farm',
-			version: 'Logo & multiplier'
-		},
-		{
-			image: 'assets/lobby-icons/logo-char-multiplier/4_Stumpy_Logo, char and multiplier.png',
-			name: 'Stumpy McDoodles',
-			version: 'Logo, character & multiplier'
-		}
-	];
+const gamesArray = [
+  {
+    image: 'assets/lobby-icons/just-logo/1_Bells-and-Holly-Logo-only.png',
+    name: 'Bells and Holly',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/with-char/2_JadeShuriken Logo and char.png',
+    name: 'Jade Shuriken',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-feat/3_WonderWoods - logo,char and feature.png',
+    name: 'Wonder Woods',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_OinkFarm_logo and multiplier.png',
+    name: 'Oink Farm',
+    version: 'Logo & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/just-logo/1_FruitSalad_logo only.png',
+    name: 'Fruit Salad',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/with-char/2_LuckyLeprechaun logo and char.png',
+    name: 'Lucky Leprechaun',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/3_DarkWaters - Logo,char and feature.png',
+    name: 'Dark Waters',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_Advari_logo and multiplier.png',
+    name: 'Advari',
+    version: 'Logo & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/1_BullsVsBears_Logo only.png',
+    name: 'Bulls vs Bears',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/with-char/2_SoccerStriker_logo and char.png',
+    name: 'Soccer Striker',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/3_Piggy Bonanza - logo, char and feature.png',
+    name: 'Piggy Bonanza',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_BuzzFuzz_Logo and multiplier.png',
+    name: 'Buzz 4 Fuzz',
+    version: 'Logo & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/just-logo/1_CarnavalLink&Win_logo only.png',
+    name: 'Carnival Link & Win',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/2_LuckyShot_logo and char - NO RED.png',
+    name: 'Lucky Shot',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-feat/3_MonkeyBonanza_logo,char and feature.png',
+    name: 'Money Bonanza',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_Stumpy_Logo, char and multiplier.png',
+    name: 'Stumpy McDoodles',
+    version: 'Logo, character & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/just-logo/1_Clover-Rollover-Logo only.png',
+    name: 'Clover Rollover',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/2_LuckyBonanza_logo and char - SQUARE SYMBOL.png',
+    name: 'Lucky Bonanza',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/3_Amazon-LostGold_logo,char and feature.png',
+    name: 'Amazon Lost Gold',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_9EnchantedBeans_logo, char and multiplier.png',
+    name: '9 Enchanted Beans',
+    version: 'Logo, character & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/just-logo/1_FlanagansRiches_Logo only.png',
+    name: "Flanagan's Riches",
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/with-char/2_Goldwyns Fairies logo and char.png',
+    name: 'Goldwyns Fairies',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-feat/3_9PotsofGold_logo,char and feature.png',
+    name: '9 Pots of Gold',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_ApeRulz_logo and multiplier copy.png',
+    name: 'Ape Rulz',
+    version: 'Logo & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/new-updates/2_AlaskanFishing_Logo and char 1.png',
+    name: 'Alaskan Fishing',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/3_CrazyMonkey.png',
+    name: 'Crazy Monkey',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/logo-char-multiplier/4_FortunePike Gold logo, character and multiplier.png',
+    name: 'Fortune Pike Gold',
+    version: 'Logo, character & multiplier'
+  },
+  {
+    image: 'assets/lobby-icons/just-logo/1_CarnavalLink&Win_logo only.png',
+    name: 'Carnival Link & Win',
+    version: 'Logo Only'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/2_Splash of Gold_Leprechaun_logo and char - NO BORDER.png',
+    name: 'Splash of Gold Leprechaun',
+    version: 'With character'
+  },
+  {
+    image: 'assets/lobby-icons/new-updates/3_SuperShowballMystery - Logo, char and feature.png',
+    name: 'Super Showball Mystery',
+    version: 'Logo, character & feature'
+  },
+  {
+    image: 'assets/lobby-icons/Updated-icons/3_3LuckyGators_Logo,char and feature.png',
+    name: '3 Lucky Gators',
+    version: 'Logo, character & feature'
+  }
+];
+
 
 	let games: Array<{ image: string; name: string; version: string }> = [];
 
@@ -181,20 +182,16 @@
 		}
 		return shuffled;
 	}
+	games = gamesArray
 
-	onMount(() => {
-		// Shuffle games on component mount
-		games = shuffleGames(gamesArray);
-	});
 
 	function handleIconClick(game: { image: string; name: string; version: string }) {
 		// Handle the click event for the game icons
 		$gameTile = game.image;
-    $gameName = game.name;
+		$gameName = game.name;
 		$gameVersion = game.version;
 		$isModalOpen = true;
 		console.log('Game icon clicked', $gameName);
-
 	}
 </script>
 
@@ -226,7 +223,7 @@
 
 		&:hover {
 			transform: scale(1.05);
-			box-shadow: 0px 0px 20px #5BE94C80;
+			box-shadow: 0px 0px 20px #5be94c80;
 		}
 	}
 
